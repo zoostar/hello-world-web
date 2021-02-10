@@ -24,23 +24,23 @@
 		p:suffix=".jsp"/>
 	
 	<beans profile="dev">
-		<context:property-placeholder location="classpath:dev/env.properties"/>
+		<context:property-placeholder location="classpath:application.properties, classpath:dev/env.properties"/>
 	</beans>
 	
 	<beans profile="int">
-		<context:property-placeholder location="classpath:int/env.properties"/>
+		<context:property-placeholder location="classpath:application.properties, classpath:int/env.properties"/>
 	</beans>
 	
 	<beans profile="qa">
-		<context:property-placeholder location="classpath:qa/env.properties"/>
+		<context:property-placeholder location="classpath:application.properties, classpath:qa/env.properties"/>
 	</beans>
 
 	<beans profile="prod">
-		<context:property-placeholder location="classpath:prod/env.properties"/>
+		<context:property-placeholder location="classpath:application.properties, classpath:prod/env.properties"/>
 	</beans>
 	
 	<beans profile="dr">
-		<context:property-placeholder location="classpath:dr/env.properties"/>
+		<context:property-placeholder location="classpath:application.properties, classpath:dr/env.properties"/>
 	</beans>
 	
 </beans>

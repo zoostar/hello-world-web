@@ -8,6 +8,6 @@
 <title>Hello World</title>
 </head>
 <body>
-	<h1>Hello World in <c:out value="${env_value}"/></h1>
+	<h1><c:out value="${index_message}"/> in <c:out value="${env_value}"/></h1>
 </body>
 </html>

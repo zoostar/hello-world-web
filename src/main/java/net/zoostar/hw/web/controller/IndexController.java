@@ -19,10 +19,14 @@ public class IndexController {
 	@Value("${env.value}")
 	protected String envValue;
 	
+	@Value("${index.message}")
+	protected String message;
+	
 	@RequestMapping(value="/", produces=MediaType.TEXT_HTML_VALUE)
 	public ModelAndView loadHomePage(Map<String, Object> model) throws ServletException {
-		log.info("Loading home page index.jsp for env: {}...", envValue);
+		log.info("Loading home page index.jsp message {} for env: {}...", message, envValue);
 		model.put("env_value", envValue);
+		model.put("index_message", message);
 		return new ModelAndView("index", model);
 	}
 }
